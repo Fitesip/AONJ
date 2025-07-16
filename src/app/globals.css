@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -23,4 +23,46 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1d1d1d;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  font-size: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+input {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  background: var(--foreground);
+  color: var(--background)
+}
+button {
+  padding: 15px 30px;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  transition: 0.2s;
+  background: var(--foreground);
+  color: var(--background);
+}
+button:hover {
+  background: #dadada;
 }

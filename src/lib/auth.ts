@@ -29,8 +29,8 @@ export const login = async (username: string, password: string): Promise<AuthRes
 
         return data
     } catch (error) {
-        console.error('Login error:', error)
-        return { success: false, error: 'Network error' }
+        console.error('Ошибка входа:', error)
+        return { success: false, error: 'Ошибка сети. Попробуйте позже.' }
     }
 }
 

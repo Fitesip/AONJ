@@ -22,32 +22,28 @@ export default function Home() {
     if (result.success) {
       router.push('/dashboard')
     } else {
-      setError(result.error || 'Login failed');
+      setError(result.error || 'Ошибка входа.');
     }
   };
 
   return (
       <div>
-        <h1>Login</h1>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Username:</label>
-            <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
+            <label>
+              Логин
+              <input type="text" placeholder='Логин' value={username} onChange={(e) => setUsername(e.target.value)}/>
+            </label>
           </div>
           <div>
-            <label>Password:</label>
-            <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
+            <label>
+              Пароль
+              <input type="password" placeholder='Пароль' value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </label>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit">Войти</button>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
         </form>
       </div>
   );

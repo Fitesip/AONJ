@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json(
-        { success: false, error: 'Invalid credentials' } satisfies AuthResponse,
+        { success: false, error: 'Неправильный логин или пароль' } satisfies AuthResponse,
         { status: 401 }
     )
 }
